@@ -32,9 +32,7 @@ def location_info(message):
 
 
 def weather_by_location(user_id, user_city):
-    user_id = user_id
-    city_name = user_city
-    params = {'APPID': WEATHER_API, 'q': city_name, 'units': 'metric', 'lang': 'en'}
+    params = {'APPID': WEATHER_API, 'q': user_city, 'units': 'metric', 'lang': 'en'}
     result = requests.get(URL, params=params)
     weather = result.json()
 
